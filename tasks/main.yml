@@ -1,0 +1,17 @@
+---
+# for the time being let's keep this simple
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Ensure samba is running
+  service: "name={{ samba_daemon }} state=started enabled=yes"
+
+- name: Copy smb.conf over to remote host
+  copy:
+   src: files/smb.conf
+   dest: /etc/samba/smb.conf
+   owner: root
+   group: root
+   mode: 0644
+   backup: yes
+  notify: restart samba

@@ -1,0 +1,6 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - richardskumat.ansible_role_samba
+    - richardskumat.ansible_role_samba_config
