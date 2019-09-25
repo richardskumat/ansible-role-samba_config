@@ -12,8 +12,11 @@ None
 Role Variables
 --------------
 
-The role only copies a simple smb.conf over to the remote host, so
-there's none.
+```
+samba_config_file_path
+```
+
+defaults to sample-smb.conf in files directory.
 
 Dependencies
 ------------
@@ -23,15 +26,13 @@ richardskumat.ansible_role_samba
 Example Playbook
 ----------------
 
-
-
 ```
 ---
 - name: Converge
   hosts: all
   roles:
     - richardskumat.ansible_role_samba
-    - richardskumat.ansible_role_samba_config
+    - { role: richardskumat.ansible_role_samba_config, samba_config_file_path: "/path/to/your/smb.conf" }
 
 ```
 

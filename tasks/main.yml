@@ -8,7 +8,7 @@
 
 - name: Copy smb.conf over to remote host
   copy:
-   src: files/smb.conf
+   src: "{{ samba_config_file_path }}"
    dest: /etc/samba/smb.conf
    owner: root
    group: root
