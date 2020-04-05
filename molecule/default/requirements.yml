@@ -1,3 +1,4 @@
 ---
+# https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-roles
 - src: https://github.com/richardskumat/ansible-role-samba
   version: master
