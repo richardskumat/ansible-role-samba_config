@@ -1,2 +1,3 @@
 ---
-- src: richardskumat.ansible_role_samba
+- src: https://github.com/richardskumat/ansible-role-samba
+  version: master
