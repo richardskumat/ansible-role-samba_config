@@ -1,4 +1,5 @@
 ---
+
 galaxy_info:
   author: richardskumat
   description: Copy over a smb.conf to a samba server
