@@ -1,3 +1,6 @@
 ---
-- name: restart samba
-  service: "name={{ samba_daemon }} state=restarted"
+- name: Restart samba
+  ansible.builtin.service:
+    name: "{{ samba_daemon }}"
+    state: restarted
+  listen: "Restart samba"
